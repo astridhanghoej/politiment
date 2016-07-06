@@ -1,7 +1,7 @@
-####################
-#  Astrid Hanghøj  #
-# 6th of July 2016 #
-####################
+----------------------
+   Astrid Hanghøj  
+  6th of July 2016 
+----------------------
 
 # politiment
 Repo for my #dkpol sentiment analysis project
