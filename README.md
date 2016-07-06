@@ -1,12 +1,12 @@
-----------------------
+
    Astrid Hanghøj  
   6th of July 2016 
-----------------------
 
-# politiment
+
+### politiment
 Repo for my #dkpol sentiment analysis project
 
-#Files
+### Files
 trainingdataharvest.R - this script is used to harvest training data for my sentiment classifier (build on Azure ML)
 
 
