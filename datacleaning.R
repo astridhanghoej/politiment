@@ -1,9 +1,5 @@
 data<-read.table("trainingdata.csv")
 
-#Get twitter data
-data<-searchTwitter("dkpol+exclude:retweets", n=13805)
-names(data)<-c("username","tweet")
-
 #Classify happy and unhappy tweets
 happy<-"((?::|;|=)(?:-)?(?:\\)|D))"
 unhappy<-"((?::|;|=)(?:-)?(?:\\())"
