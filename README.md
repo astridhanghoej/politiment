@@ -4,10 +4,11 @@
 
 
 ### politiment
-Repo for my #dkpol sentiment analysis project
+Please refer to http://astridhanghoej.dk/?page_id=129 for an explanation of this project.
 
 ### Files
-trainingdataharvest.R - this script is used to harvest training data for my sentiment classifier (build on Azure ML)
+trainingdataharvest.R - this script is used to harvest training data
+datacleaning.R - this script is used to clean training data
 
 
-Please refer to http://astridhanghoej.dk/?page_id=129 for an explanation of this project.
+
