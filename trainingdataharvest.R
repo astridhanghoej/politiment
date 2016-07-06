@@ -20,4 +20,4 @@ tweetsunhappy<-as.data.frame(cbind(username=sapply(unhappydata,function(x) x$scr
 data<-rbind(tweetshappy,tweetsunhappy)
 
 #Append to CSV file
-write.table(data,"trainingdata.csv",append=F,col.names = F,row.names = F)
+write.table(data,"trainingdata.csv",append=T,col.names = F,row.names = F)
