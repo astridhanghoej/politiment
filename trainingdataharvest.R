@@ -13,11 +13,13 @@ happydata<-searchTwitter("dkpol+:)+exclude:retweets+lang:da", n=10000)
 unhappydata<-searchTwitter("dkpol+:(+exclude:retweets+lang:da", n=10000)
 
 #Subset data to be used from list element
-tweetshappy<-as.data.frame(cbind(username=sapply(happydata,function(x) x$screenName),tweet=sapply(happydata,function(x) x$text)))
-tweetsunhappy<-as.data.frame(cbind(username=sapply(unhappydata,function(x) x$screenName),tweet=sapply(unhappydata,function(x) x$text)))
+tweetsh<-as.data.frame(cbind(username=sapply(happydata,function(x) x$screenName),tweet=sapply(happydata,function(x) x$text)))
+tweetsuh<-as.data.frame(cbind(username=sapply(unhappydata,function(x) x$screenName),tweet=sapply(unhappydata,function(x) x$text)))
 
-#Combine data into dataframe
-data<-rbind(tweetshappy,tweetsunhappy)
+data<-rbind(tweetsh,tweetsuh)
+olddata<-read.table("trainingdata.csv")
+names(olddata)<-names(data)
 
-#Append to CSV file
-write.table(data,"trainingdata.csv",append=T,col.names = F,row.names = F)
+newdata<-unique(rbind(data,olddata))
+
+write.table(newdata,"trainingdata.csv",col.names = F,row.names = F)
